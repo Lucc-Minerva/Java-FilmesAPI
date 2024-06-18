@@ -9,7 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ApiMovieApplication {
-    public static String[] main(String[] args) throws IOException, InterruptedException {
+
+    public static void main(String[] args) throws IOException, InterruptedException {
 
         String apiKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyZDVmNjc2ZWI2MmVhMzI4ODZhZGMzYjJiNzZlMTc3MyIsInN1YiI6IjY2NzA5YjMyZjk4NGRlZjhiN2MzNWEzYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.sPZf6AUvWGIaCueAzD0vqBWrgWt4FepYYxUcvJeq7DM";
 
@@ -26,22 +27,20 @@ public class ApiMovieApplication {
         String json = response.body();
         
         System.out.println("Resposta da JSON: " + json);
-        return args;
 
-        String[] filmesArray = parseJsonFilmes(json);
+        // String[] filmesArray = parseJsonFilmes(json);
 
-        List<String> titulos = parseTitulos(filmesArray);
-        titulos.forEach(System.out::println);
+        // List<String> titulos = parseTitulos(filmesArray);
+        // titulos.forEach(System.out::println);
 
-        List<String> urlImagens = parseImagens(filmesArray);
-        urlImagens.forEach(System.out::println);
+        // List<String> urlImagens = parseImagens(filmesArray);
+        // urlImagens.forEach(System.out::println);
 
-        List<String> rating = parseRating(filmesArray);
-        rating.forEach(System.out::println);
+        // List<String> rating = parseRating(filmesArray);
+        // rating.forEach(System.out::println);
 
-        List<String> year = parseYear(filmesArray);
-        year.forEach(System.out::println);
+        // List<String> year = parseYear(filmesArray);
+        // year.forEach(System.out::println);
 
     }
-
 }
